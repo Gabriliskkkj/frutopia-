@@ -6,11 +6,11 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #e9e9e9;
+    background-color: #ffffff;
 }
 
 header {
-    background-color: #000000ec;
+    background-color: #005800d5;
     color: #ffffff;
     text-align: center;
     padding: 20px 0;
@@ -48,7 +48,7 @@ header p {
 }
 
 .suco-limao {
-    background-color: hsl(0, 0%, 100%);
+    background-color: hsla(120, 71%, 59%, 0.5);
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.452);
     overflow: hidden;
@@ -57,7 +57,7 @@ header p {
     text-align: center;
 }
 .suco-laranja {
-    background-color: hsl(0, 0%, 100%);
+    background-color: hsla(36, 100%, 50%, 0.3);
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.567);
     overflow: hidden;
@@ -66,7 +66,7 @@ header p {
     text-align: center;
 }
 .suco-abacaxi {
-    background-color: hsl(0, 0%, 100%);
+    background-color: hsla(56, 89%, 63%, 0.5);
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.46);
     overflow: hidden;
@@ -75,7 +75,7 @@ header p {
     text-align: center;
 }
 .suco-uva {
-    background-color: hsl(0, 0%, 100%);
+    background-color: hsla(276, 94%, 69%, 0.5);
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.469);
     overflow: hidden;
@@ -102,8 +102,8 @@ img {
 }
 
 button {
-    background-color: rgba(1, 116, 39, 0.925);
-    color: #fff;
+    background-color: #338a003b;
+    color: #000000;
     border: none;
     padding: 10px 20px;
     margin-bottom: 20px;
@@ -114,12 +114,12 @@ button {
 }
 
 button:hover {
-    background-color: #64d11b;
+    background-color: #6161615d;
 }
 
 footer {
     background-color: #000000;
-    color: #fff;
+    color: #fafafa;
     text-align: center;
     
         background-color: hsl(0, 0%, 100%);
@@ -146,34 +146,34 @@ footer {
     animation:animation 2s infinite;
 }
 @keyframes animation{
-  0% { color: rgb(235, 196, 0); }
-    20% { color: rgb(255, 238, 0); }
-    40% { color: rgb(213, 238, 73); }
-    60% { color: rgb(191, 241, 92); }
-    80% { color: rgb(234, 255, 0); }
+  0% { color: rgb(233, 229, 8); }
+    20% { color: rgb(224, 210, 10); }
+    40% { color: rgb(216, 202, 0); }
+    60% { color: rgb(212, 198, 0); }
+    80% { color: rgb(228, 224, 0); }
     100% { color: rgb(255, 226, 61); }
 } 
 .rgb-laranja{
     animation:animation2 2s infinite;
 }
 @keyframes animation2{
-  0% { color: rgb(250, 187, 0); }
+  0% { color: rgb(218, 163, 0); }
     20% { color: rgb(255, 166, 0); }
     40% { color: rgb(255, 196, 1); }
-    60% { color: rgb(255, 225, 0); }
-    80% { color: rgb(234, 255, 0); }
-    100% { color: rgb(255, 217, 0); }
+    60% { color: rgb(255, 174, 0); }
+    80% { color: rgb(255, 166, 0); }
+    100% { color: rgb(255, 136, 0); }
 } 
 .rgb-limao{
     animation:animation3 2s infinite;
 }
 @keyframes animation3{
-  0% { color: rgb(79, 250, 0); }
-    20% { color: rgb(9, 255, 0); }
-    40% { color: rgb(33, 179, 52); }
-    60% { color: rgb(224, 243, 78); }
-    80% { color: rgb(209, 226, 19); }
-    100% { color: rgb(174, 255, 0); }
+  0% { color: rgb(61, 192, 0); }
+    20% { color: rgb(7, 214, 0); }
+    40% { color: rgb(28, 218, 53); }
+    60% { color: rgb(78, 231, 40); }
+    80% { color: rgb(130, 231, 34); }
+    100% { color: rgb(38, 194, 7); }
 } 
 
 .Frutopia{
@@ -207,7 +207,7 @@ footer {
         .quantity-selector input[type="number"]
          { width: 60px; padding: 5px; 
             text-align: center;
-             border: 1px solid #ccc;
+             border: 1px solid #000000;
               border-radius: 4px; 
             }
 
@@ -216,12 +216,12 @@ footer {
                  margin: 0 5px; 
                  border: none; 
                  border-radius: 4px; 
-                 background-color: rgba(1, 116, 39, 0.925); 
+                 background-color: #338a003b; 
                  color: white; cursor: pointer;
                  } 
                  
                  .quantity-selector button:hover { 
-                    background-color: #00b300; }
+                    background-color: #6161615d; }
 
                     .quantity-selector {
                         display: flex;
@@ -273,7 +273,7 @@ footer {
 .botao{
     width: 150px;
     background-color: rgba(1, 116, 39, 0.925);
-    color: #fff;
+    color: #ffffff;
     border: none;
     padding: 10px 20px;
     margin-bottom: 20px;
@@ -297,7 +297,7 @@ a {
     padding: 8px;
 }
 .compras th {
-    background-color: #f2f2f2;
+    background-color: #d2f5c8;
     text-align: left;
 }
 .buttons-container {
@@ -308,14 +308,14 @@ a {
 .buttons-container button, .buttons-container a {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #4CAF50;
-    color: white;
+    background-color: #d2f5c8;
+    color: rgb(0, 0, 0);
     text-decoration: none;
     border-radius: 5px;
     margin: 0 10px;
 }
 .buttons-container button:hover, .buttons-container a:hover {
-    background-color: #45a049;
+    background-color: #66e26c;
 }
 
                            
