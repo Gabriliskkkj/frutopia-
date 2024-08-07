@@ -47,42 +47,31 @@ header p {
     gap: 20px;
 }
 
-.suco-limao {
+.limao {
     background-color: hsla(120, 71%, 59%, 0.5);
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.452);
-    overflow: hidden;
-    transition: transform 0.3s;
-    width: 200px;
-    text-align: center;
 }
-.suco-laranja {
+.laranja {
     background-color: hsla(36, 100%, 50%, 0.3);
+}
+.abacaxi {
+    background-color: hsla(56, 89%, 63%, 0.5);
+}
+.uva {
+    background-color: hsla(276, 94%, 69%, 0.5);
+}
+
+.suco{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    gap: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.567);
     overflow: hidden;
     transition: transform 0.3s;
     width: 200px;
-    text-align: center;
-}
-.suco-abacaxi {
-    background-color: hsla(56, 89%, 63%, 0.5);
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.46);
-    overflow: hidden;
-    transition: transform 0.3s;
-    width: 200px;
-    text-align: center;
-}
-.suco-uva {
-    background-color: hsla(276, 94%, 69%, 0.5);
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.469);
-    overflow: hidden;
-    transition: transform 0.3s;
-    width: 200px;
-    text-align: center;
-
 }
 
 .suco:hover {
@@ -131,62 +120,7 @@ footer {
         text-align: center;
 }
 
-.rgb-uva{
-    animation:rainbowText 2s infinite;
-}
-@keyframes rainbowText{
-  0% { color: rgb(169, 0, 195); }
-    20% { color: rgb(204, 117, 255); }
-    40% { color: rgb(172, 77, 175); }
-    60% { color: rgb(207, 78, 243); }
-    80% { color: rgb(216, 0, 216); }
-    100% { color: rgb(226, 1, 207); }
-} 
-.rgb-abacaxi{
-    animation:animation 2s infinite;
-}
-@keyframes animation{
-  0% { color: rgb(233, 229, 8); }
-    20% { color: rgb(224, 210, 10); }
-    40% { color: rgb(216, 202, 0); }
-    60% { color: rgb(212, 198, 0); }
-    80% { color: rgb(228, 224, 0); }
-    100% { color: rgb(255, 226, 61); }
-} 
-.rgb-laranja{
-    animation:animation2 2s infinite;
-}
-@keyframes animation2{
-  0% { color: rgb(218, 163, 0); }
-    20% { color: rgb(255, 166, 0); }
-    40% { color: rgb(255, 196, 1); }
-    60% { color: rgb(255, 174, 0); }
-    80% { color: rgb(255, 166, 0); }
-    100% { color: rgb(255, 136, 0); }
-} 
-.rgb-limao{
-    animation:animation3 2s infinite;
-}
-@keyframes animation3{
-  0% { color: rgb(61, 192, 0); }
-    20% { color: rgb(7, 214, 0); }
-    40% { color: rgb(28, 218, 53); }
-    60% { color: rgb(78, 231, 40); }
-    80% { color: rgb(130, 231, 34); }
-    100% { color: rgb(38, 194, 7); }
-} 
 
-.Frutopia{
-    animation:rainbowText4 3s infinite;
-}
-@keyframes rainbowText4{
-  0% { color: rgb(209, 255, 3); }
-    20% { color: rgb(162, 255, 0); }
-    40% { color: rgb(0, 255, 34); }
-    60% { color: rgb(40, 255, 11); }
-    80% { color: rgb(229, 255, 0); }
-    100% { color: rgb(174, 255, 0); }
-} 
 
 
      .container { 
@@ -289,6 +223,7 @@ a {
 }
 .compras table {
     width: 100%;
+    text-align: center;
     border-collapse: collapse;
     margin-top: 10px;
 }
