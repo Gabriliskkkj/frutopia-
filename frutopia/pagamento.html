@@ -50,52 +50,10 @@
             <tfoot id="rodapeTabela"></tfoot>
         </table>
     </div>
-    <div class="rol table-mobile">
-        <div class="list">
-            <div class="card">
-                <div class="list-item">
-                    <div class="primary">Perço</div>
-                    <div class="secondary">R$ 18,00</div>
-                </div>
-                <div class="list-item">
-                    <div class="primary">Quantidade</div>
-                    <div class="secondary">3</div>
-                </div>
-                <div class="list-item">
-                    <div class="primary">Perço Total</div>
-                    <div class="secondary">R$ 60,00</div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="list-item">
-                    <div class="primary">Perço</div>
-                    <div class="secondary">R$ 18,00</div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="list-item">
-                    <div class="primary">Perço</div>
-                    <div class="secondary">R$ 18,00</div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="list-item">
-                    <div class="primary">Perço</div>
-                    <div class="secondary">R$ 18,00</div>
-                </div>
-            </div>
-        </div>
-    </div>
+    
+                
     <hr>
-    <form class="onde">
-        <h2>Endereço para entrega</h2>
-        <label for="recebedor">Nome do recebedor:</label><br>
-        <input type="text" id="recebedor" name="nomeRecebedor"><br><br>
-        <label for="endereco">Endereço para entrega:</label><br>
-        <input type="text" id="endereco" name="endereco"><br><br>
-        <label for="horario">Horario para entregar:</label><br>
-        <input type="text" id="horario" name="horario" placeholder="hh/mm"><br><br>
-        <button type="submit">Avançar</button>
+    
     </form>
     <div class="op_pagamento">
         <h2>Escolha a opção de Pagamento</h2>
@@ -108,23 +66,13 @@
         </label>
     </div>
     <div id="form-debito" class="form-container">
-        <h2>Pagamento com Cartão de Débito</h2>
-        <h3>Apenas Simulação</h3>
-        <form>
-            <label for="nomeCartao">Nome no Cartão:</label><br>
-            <input type="text" id="nomeCartao" name="nomeCartao"><br><br>
-            <label for="numeroCartao">Número do Cartão:</label><br>
-            <input type="text" id="numeroCartao" name="numeroCartao"><br><br>
-            <label for="validadeCartao">Validade:</label><br>
-            <input type="text" id="validadeCartao" name="validadeCartao" placeholder="MM/AA"><br><br>
-            <label for="cvvCartao">CVV:</label><br>
-            <input type="text" id="cvvCartao" name="cvvCartao"><br><br>
-            <button type="button">Salvar</button>
-        </form>
+        
+       
+        
     </div>
     <div id="form-pix" class="form-container">
         <h2>Pagamento com PIX</h2>
-        <h3>Apenas Simulação</h3>
+       
         <div id="codigoPixContainer">
             <h3>Código PIX:</h3>
             <p id="codigoPix"></p>
@@ -134,8 +82,7 @@
         </div>
     </div>
     <br>
-    <div class="caminho">
-        <a href="bye_bye.html">Finalizar</a>
+    
     </div>
 
     </footer>
@@ -147,3 +94,7 @@
 </body>
 
 </html>
+<div class="buttons-container">
+    <button onclick="limparCompras()">Limpar Compras</button>
+    <a href="agradecimento.html">Finalizar</a>
+</div>
