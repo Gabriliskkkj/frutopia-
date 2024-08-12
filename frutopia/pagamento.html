@@ -1,31 +1,41 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Produtos</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/estilos/pagamento.css">
     <!-- SweetAlert CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
     <style>
         .form-container {
-            display: none; /* Esconde os formulários inicialmente */
+            display: none;
+            /* Esconde os formulários inicialmente */
         }
+
         a {
-            color: inherit; /* Usa a cor do elemento pai */
-            text-decoration: none; /* Remove o sublinhado */
+            color: inherit;
+            /* Usa a cor do elemento pai */
+            text-decoration: none;
+            /* Remove o sublinhado */
         }
+
         a:hover {
-            color: rgb(18, 107, 0); /* Altere a cor ao passar o mouse, se desejar */
-            text-decoration: underline; /* Adicione o sublinhado ao passar o mouse, se desejar */
+            color: rgb(18, 107, 0);
+            /* Altere a cor ao passar o mouse, se desejar */
+            text-decoration: underline;
+            /* Adicione o sublinhado ao passar o mouse, se desejar */
         }
     </style>
 </head>
+
 <body>
     <header class="cabeçalho">
         <span class="linha_2">Opções de Pagamento</span>
     </header>
-    <div class="rol">
+    <div class="rol table-desktop">
         <table id="tabelaSelecionados">
             <caption>Produtos Selecionados</caption>
             <thead>
@@ -33,11 +43,48 @@
                     <th>Produto</th>
                     <th>Quantidade</th>
                     <th>Preço Total</th>
+
                 </tr>
             </thead>
             <tbody id="corpoTabela"></tbody>
             <tfoot id="rodapeTabela"></tfoot>
         </table>
+    </div>
+    <div class="rol table-mobile">
+        <div class="list">
+            <div class="card">
+                <div class="list-item">
+                    <div class="primary">Perço</div>
+                    <div class="secondary">R$ 18,00</div>
+                </div>
+                <div class="list-item">
+                    <div class="primary">Quantidade</div>
+                    <div class="secondary">3</div>
+                </div>
+                <div class="list-item">
+                    <div class="primary">Perço Total</div>
+                    <div class="secondary">R$ 60,00</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="list-item">
+                    <div class="primary">Perço</div>
+                    <div class="secondary">R$ 18,00</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="list-item">
+                    <div class="primary">Perço</div>
+                    <div class="secondary">R$ 18,00</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="list-item">
+                    <div class="primary">Perço</div>
+                    <div class="secondary">R$ 18,00</div>
+                </div>
+            </div>
+        </div>
     </div>
     <hr>
     <form class="onde">
@@ -90,17 +137,13 @@
     <div class="caminho">
         <a href="bye_bye.html">Finalizar</a>
     </div>
-    <footer class="rodape">
-        <span class="texto_contato">
-            <span class="texto_contato"> email:pessoa.nome@dominio.com.br>
-            <hr>
-            <span class="texto_contato"><img src="imagens/whatsapp1.png" class="icone_whats"> Whatsapp: (45)xxxxx-xxxx</span>
-            <hr>
+
     </footer>
     <script src="scripts/lista.js"></script>
     <script src="scripts/pagamento.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
-  
+
 </body>
+
 </html>

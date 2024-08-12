@@ -58,3 +58,48 @@
     transition: background-color 0.3s ease;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Adiciona uma sombra cinza */
   }
+
+
+  .table-desktop{
+    display: flex;
+  }
+
+  .table-mobile{
+    display: none;
+    flex-direction: column;
+  }
+
+  @media screen and (max-width: 900px) {
+    .table-mobile{
+      display: flex;
+    }
+
+    .table-desktop{
+      display: none;
+    }
+  } 
+
+  .list{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .card{
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    padding: 10px;
+    border-radius: 6px;
+    width: 100%;
+    max-width: 150px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .list-item{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }

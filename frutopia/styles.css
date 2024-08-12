@@ -252,6 +252,10 @@ a {
 .buttons-container button:hover, .buttons-container a:hover {
     background-color: #66e26c;
 }
-
+.linha_2{
+    font-size: 25px;
+    font-style: italic;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+}
                            
        
