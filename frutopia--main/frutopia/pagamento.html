@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Produtos</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/estilos/pagamento.css">
+    <!-- SweetAlert CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <style>
+        .form-container {
+            display: none;
+            /* Esconde os formulários inicialmente */
+        }
+
+        a {
+            color: inherit;
+            /* Usa a cor do elemento pai */
+            text-decoration: none;
+            /* Remove o sublinhado */
+        }
+
+        a:hover {
+            color: rgb(18, 107, 0);
+            /* Altere a cor ao passar o mouse, se desejar */
+            text-decoration: underline;
+            /* Adicione o sublinhado ao passar o mouse, se desejar */
+        }
+    </style>
+</head>
+
+<body>
+    <header class="cabeçalho">
+        <span class="linha_2">Opções de Pagamento</span>
+    </header>
+    <div class="rol table-desktop">
+        <table id="tabelaSelecionados">
+            <caption>Produtos Selecionados</caption>
+            <thead>
+                <tr>
+                    <th>Produto</th>
+                    <th>Quantidade</th>
+                    <th>Preço Total</th>
+
+                </tr>
+            </thead>
+            <tbody id="corpoTabela"></tbody>
+            <tfoot id="rodapeTabela"></tfoot>
+        </table>
+    </div>
+    
+                
+    <hr>
+    
+    </form>
+    <div class="op_pagamento">
+        <h2>Escolha a opção de Pagamento</h2>
+        <hr>
+        <label>
+            <input type="radio" name="pagamento" value="debito" onclick="mostrarFormulario('debito')"> Dinheiro Vivo
+        </label>
+        <label>
+            <input type="radio" name="pagamento" value="pix" onclick="mostrarFormulario('pix')"> PIX
+        </label>
+    </div>
+    <div id="form-debito" class="form-container">
+        
+       
+        
+    </div>
+    <div id="form-pix" class="form-container">
+        <h2>Pagamento com PIX</h2>
+       
+        <div id="codigoPixContainer">
+            <h3>Código PIX:</h3>
+            <p id="codigoPix"></p>
+            <p id="copiarCodigoPix" class="btn" onclick="copiarCodigoPix()">Clique aqui para copiar o código PIX</p>
+            <p id="pixCode" style="display:none;">073.338.601-67</p>
+        </div>
+    </div>
+    <br>
+    
+    </div>
+
+    </footer>
+    <script src="scripts/lista.js"></script>
+    <script src="scripts/pagamento.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+
+</body>
+
+</html>
+<div class="buttons-container">
+    <button onclick="limparCompras()">Limpar Compras</button>
+    <a href="agradecimento.html">Finalizar</a>
+</div>
