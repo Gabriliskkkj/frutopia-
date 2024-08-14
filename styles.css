@@ -9,10 +9,12 @@ body {
     background-color: #ffffff;
 }
 
-header {
-    background-color: #1dc81de8;
+.banner {
+background-image: url(imagens/depositphotos_169593726-stock-photo-fruits-fruit-food-collection-background.jpg);
     color: #ffffff;
+
     text-align: center;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     padding: 20px 0;
 }
 
@@ -38,6 +40,7 @@ header p {
     margin-bottom: 20px;
     color: #246500;
     font-family: 'Times New Roman', Times, serif;
+    text-shadow: -1px 0 rgb(89, 255, 0), 0 1px rgb(106, 255, 0), 1px 0 rgb(42, 251, 1), 0 -1px black;
 }
 
 .sucos-container {
@@ -123,9 +126,10 @@ footer {
 
 
 
-     .container { 
-        background-color: white; 
-        padding: 20px; 
+     .container2 { 
+        background-color: rgb(232, 232, 232); 
+        margin-top: 150px;
+        padding: 20px;
         border-radius: 8px; 
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
          text-align: center; } 
@@ -255,6 +259,7 @@ a {
 .linha_2{
     font-size: 25px;
     font-style: italic;
+    
     font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
 }
                            
