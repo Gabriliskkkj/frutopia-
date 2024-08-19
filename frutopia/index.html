@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frutopia - Sucos de Frutas</title>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+    <header>
+        <h1 class="Frutopia">Frutopia</h1>
+        <p>Os melhores sucos de fruta!</p>
+    </header>
+    <main>
+        <section class="sucos">
+            <h2>Nossos Sucos</h2>
+            <div class="sucos-container">
+                <div class="suco limao">
+                    <img src="imagens/limao.png" alt="Suco de Limão">
+                    <h3 class="rgb-limao">Suco de Limão  R$1,50</h3>
+                    <div class="quantity-selector">
+                        <button onclick="decreaseQuantity('limao')">-</button>
+                        <input type="number" id="quantity-limao" value="1" min="1">
+                        <button onclick="increaseQuantity('limao')">+</button>
+                    </div>
+                    <button onclick="comprar('limao', 1.50)">Comprar</button>
+                </div>
+                <div class="suco laranja">
+                    <img src="imagens/laranja.png" alt="Suco de Laranja">
+                    <h3 class="rgb-laranja">Suco de Laranja  R$1,50</h3>
+                    <div class="quantity-selector">
+                        <button onclick="decreaseQuantity('laranja')">-</button>
+                        <input type="number" id="quantity-laranja" value="1" min="1">
+                        <button onclick="increaseQuantity('laranja')">+</button>
+                    </div>
+                    <button onclick="comprar('laranja', 1.50)">Comprar</button>
+                </div>
+                <div class="suco abacaxi">
+                    <img src="imagens/abacaxi.png" class="abacaxi" alt="Suco de Abacaxi">
+                    <h3 class="rgb-abacaxi">Suco de Abacaxi  R$1,50</h3>
+                    <div class="quantity-selector">
+                        <button onclick="decreaseQuantity('abacaxi')">-</button>
+                        <input type="number" id="quantity-abacaxi" value="1" min="1">
+                        <button onclick="increaseQuantity('abacaxi')">+</button>
+                    </div>
+                    <button onclick="comprar('abacaxi', 1.50)">Comprar</button>
+                </div>
+                <div class="suco uva">
+                    <img src="imagens/uva.png" alt="Suco de Uva">
+                    <h3 class="rgb-uva">Suco de Uva  R$1,50</h3>
+                    <div class="quantity-selector">
+                        <button onclick="decreaseQuantity('uva')">-</button>
+                        <input type="number" id="quantity-uva" value="1" min="1">
+                        <button onclick="increaseQuantity('uva')">+</button>
+                    </div>
+                    <button onclick="comprar('uva', 1.50)">Comprar</button>
+                </div>
+            </div>
+        </section>
+        <section class="compras">
+            <h2>Compras Recentes</h2>
+            <div id="compras-list">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Produto</th>
+                            <th>Quantidade</th>
+                            <th>Preço Total</th>
+                        </tr>
+                    </thead>
+                    <tbody id="compras-tabela"></tbody>
+                </table>
+            </div>
+        </section>
+        <div class="buttons-container">
+            <button onclick="limparCompras()">Limpar Compras</button>
+            <a href="pagamento.html">Ir para compras</a>
+        </div>
+    </main>
+    <script src="java.js"></script>    
+</body>
+</html>
