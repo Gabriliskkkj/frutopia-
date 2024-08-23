@@ -132,7 +132,44 @@ footer {
         padding: 20px;
         border-radius: 8px; 
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-         text-align: center; } 
+         text-align: center;
+         .btn {
+            display: inline-block;
+            padding: 12px 24px; 
+            margin: 20px 0;
+            font-size: 18px; 
+            color: #ffffff; 
+            background: linear-gradient(45deg, #4CAF50, #81c784); 
+            border: none;
+            border-radius: 8px; 
+            text-decoration: none; 
+            text-transform: uppercase;
+            font-weight: bold; 
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+         
+        }
+        
+        .btn:hover {
+            background: linear-gradient(45deg, #45a049, #66bb6a);
+            transform: scale(1.05); 
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); 
+        }
+        
+        .btn:active {
+            background: linear-gradient(45deg, #388e3c, #57a05a); /* Gradiente ainda mais escuro ao clicar */
+            transform: scale(1); /* Retorna ao tamanho original ao clicar */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra padrão ao clicar */
+        }
+        
+        .btn:focus {
+            outline: none; /* Remove o contorno padrão ao focar no botão */
+            box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.5); /* Adiciona uma borda azul clara quando o botão está em foco */
+        }
+        
+        
+        
+        
+        } 
 
          
 
