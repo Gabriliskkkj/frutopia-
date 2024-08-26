@@ -1,93 +1,83 @@
-       function mostrarFormulario(formulario) {
-            document.getElementById('form-debito').style.display = 'none';
-            document.getElementById('form-pix').style.display = 'none';
+// Função para mostrar o formulário selecionado
+function mostrarFormulario(formulario) {
+    document.getElementById('form-debito').style.display = 'none';
+    document.getElementById('form-pix').style.display = 'none';
 
-            if (formulario === 'debito') {
-                document.getElementById('form-debito').style.display = 'block';
-            } else if (formulario === 'pix') {
-                document.getElementById('form-pix').style.display = 'block';
-                gerarQRCode();
-            }
-        }
+    if (formulario === 'debito') {
+        document.getElementById('form-debito').style.display = 'block';
+    } else if (formulario === 'pix') {
+        document.getElementById('form-pix').style.display = 'block';
+        gerarQRCode(); // Gera o QR Code quando o formulário PIX é exibido
+    }
+}
 
-        function gerarQRCode() {
-            const qr = new QRious({
-                element: document.getElementById('qrCode'),
-                value: 'Seu código PIX aqui', // Substitua pelo valor real do código PIX
-                size: 200
-            });
-        }
+// Função para gerar o QR Code
+function gerarQRCode() {
+    const qr = new QRious({
+        element: document.getElementById('qrCode'), // Certifique-se de que este ID está presente no HTML
+        value: 'Seu código PIX aqui', // Substitua pelo valor real do código PIX
+        size: 200
+    });
+}
 
-        function copiarCodigoPix() {
-            const codigoPix = document.getElementById('codigoPix').innerText;
-            navigator.clipboard.writeText(codigoPix).then(function() {
-                Swal.fire('Código PIX copiado!');
-            }, function(err) {
-                Swal.fire('Erro ao copiar o código PIX', '', 'error');
-            });
-        }
+// Função para copiar o código PIX para a área de transferência
+function copiarCodigoPix() {
+    const codigoPixElement = document.getElementById('pixCode');
+    const codigoPix = codigoPixElement.textContent;
 
-        document.addEventListener('DOMContentLoaded', function () {
-            carregarCompras();
-        });
+    navigator.clipboard.writeText(codigoPix).then(function() {
+        Swal.fire('Código PIX copiado!');
+    }, function(err) {
+        Swal.fire('Erro ao copiar o código PIX', '', 'error');
+    });
+}
 
-        function carregarCompras() {
-            const compras = JSON.parse(localStorage.getItem('compras')) || [];
-            const corpoTabela = document.getElementById('corpoTabela');
-            const rodapeTabela = document.getElementById('rodapeTabela');
+// Função para carregar as compras do localStorage e exibi-las na tabela
+document.addEventListener('DOMContentLoaded', function () {
+    carregarCompras();
+});
 
-            let totalGeral = 0;
+function carregarCompras() {
+    const compras = JSON.parse(localStorage.getItem('compras')) || [];
+    const corpoTabela = document.getElementById('corpoTabela');
+    const rodapeTabela = document.getElementById('rodapeTabela');
 
-            compras.forEach(compra => {
-                const tr = document.createElement('tr');
+    let totalGeral = 0;
 
-                const tdProduto = document.createElement('td');
-                tdProduto.textContent = `Suco de ${compra.suco.charAt(0).toUpperCase() + compra.suco.slice(1)}`;
+    compras.forEach(compra => {
+        const tr = document.createElement('tr');
 
-                const tdQuantidade = document.createElement('td');
-                tdQuantidade.textContent = compra.quantidade;
+        const tdProduto = document.createElement('td');
+        tdProduto.textContent = `Suco de ${compra.suco.charAt(0).toUpperCase() + compra.suco.slice(1)}`;
 
-                const tdPrecoTotal = document.createElement('td');
-                tdPrecoTotal.textContent = `R$${compra.total.toFixed(2)}`;
+        const tdQuantidade = document.createElement('td');
+        tdQuantidade.textContent = compra.quantidade;
 
-                tr.appendChild(tdProduto);
-                tr.appendChild(tdQuantidade);
-                tr.appendChild(tdPrecoTotal);
+        const tdPrecoTotal = document.createElement('td');
+        tdPrecoTotal.textContent = `R$${compra.total.toFixed(2)}`;
 
-                corpoTabela.appendChild(tr);
+        tr.appendChild(tdProduto);
+        tr.appendChild(tdQuantidade);
+        tr.appendChild(tdPrecoTotal);
 
-                totalGeral += compra.total;
-            });
+        corpoTabela.appendChild(tr);
 
-            const trTotal = document.createElement('tr');
-            const tdTotalLabel = document.createElement('td');
-            tdTotalLabel.textContent = 'Total';
-            tdTotalLabel.colSpan = 2;
-            tdTotalLabel.style.fontWeight = 'bold';
-            tdTotalLabel.style.textAlign = 'right';
+        totalGeral += compra.total;
+    });
 
-            const tdTotalValue = document.createElement('td');
-            tdTotalValue.textContent = `R$${totalGeral.toFixed(2)}`;
-            tdTotalValue.style.fontWeight = 'bold';
+    const trTotal = document.createElement('tr');
+    const tdTotalLabel = document.createElement('td');
+    tdTotalLabel.textContent = 'Total';
+    tdTotalLabel.colSpan = 2;
+    tdTotalLabel.style.fontWeight = 'bold';
+    tdTotalLabel.style.textAlign = 'right';
 
-            trTotal.appendChild(tdTotalLabel);
-            trTotal.appendChild(tdTotalValue);
+    const tdTotalValue = document.createElement('td');
+    tdTotalValue.textContent = `R$${totalGeral.toFixed(2)}`;
+    tdTotalValue.style.fontWeight = 'bold';
 
-            rodapeTabela.appendChild(trTotal);
-        }
-        function copiarCodigoPix() {
-            // Seleciona o elemento com o código PIX
-            const codigoPixElement = document.getElementById('pixCode');
-            const codigoPix = codigoPixElement.textContent;
+    trTotal.appendChild(tdTotalLabel);
+    trTotal.appendChild(tdTotalValue);
 
-            // Cria um elemento temporário para copiar o texto
-            const tempInput = document.createElement('input');
-            document.body.appendChild(tempInput);
-            tempInput.value = codigoPix;
-            tempInput.select();
-            document.execCommand('copy');
-            document.body.removeChild(tempInput);
-
-            // Opcional: Exibir uma mensagem de confirmação
-            alert('Código PIX copiado para a área de transferência!');
-        }
+    rodapeTabela.appendChild(trTotal);
+}

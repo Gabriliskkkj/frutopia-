@@ -1,3 +1,4 @@
+
 @import url(/estilos/lista.css);
 @import url(/estilos/pagamento.css);
 @import url(/estilos/lista.css);
@@ -40,7 +41,7 @@ header p {
     margin-bottom: 20px;
     color: #246500;
     font-family: 'Times New Roman', Times, serif;
-    text-shadow: -1px 0 rgb(89, 255, 0), 0 1px rgb(106, 255, 0), 1px 0 rgb(42, 251, 1), 0 -1px black;
+    text-shadow: -1px 0 rgba(89, 255, 0, 0.253), 0 1px rgba(54, 129, 0, 0.411), 1px 0 rgba(43, 251, 1, 0.322), 0 -1px black;
 }
 
 .sucos-container {
@@ -57,12 +58,14 @@ header p {
     background-color: hsla(36, 100%, 50%, 0.3);
 }
 .abacaxi {
-    background-color: hsla(56, 89%, 63%, 0.5);
+    background-color: hsla(59, 100%, 50%, 0.5);
 }
 .uva {
     background-color: hsla(276, 94%, 69%, 0.5);
 }
-
+.suco.abacaxi img {
+    background-color: transparent;
+}
 .suco{
     display: flex;
     flex-direction: column;
@@ -132,7 +135,7 @@ footer {
         padding: 20px;
         border-radius: 8px; 
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-         text-align: center;
+         text-align: center;}
          .btn {
             display: inline-block;
             padding: 12px 24px; 
@@ -169,7 +172,7 @@ footer {
         
         
         
-        } 
+        
 
          
 
@@ -291,13 +294,79 @@ a {
     margin: 0 10px;
 }
 .buttons-container button:hover, .buttons-container a:hover {
-    background-color: #66e26c;
+    background-color: #66e26c94;
+
 }
 .linha_2{
-    font-size: 25px;
+    font-size: 30px;
     font-style: italic;
     
     font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
 }
                            
-       
+       .th{
+        text-align: center;
+       }
+       header.cabeçalho2 {
+        background-color: #3bac41;
+        color: #fff;
+        text-align: center;
+        padding: 1rem;
+      }
+      
+      header.cabeçalho2 .linha_2 {
+        font-size: 38px;
+        font-weight: bold;
+    
+      }
+      
+      /* Estilos da Tabela */
+      .rol.table-desktop {
+        margin: 2rem auto;
+        max-width: 1200px;
+        padding: 0 1rem;
+      }
+      
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      
+      caption {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        color: #81c784;
+      }
+      
+      thead th {
+        background-color: #66e26c94;
+        color: #000000;
+        padding: 0.75rem;
+        text-align: left;
+      }
+      
+      tbody td {
+        padding: 0.75rem;
+        border-bottom: 1px solid #000000;
+      }
+      
+      tfoot {
+        font-weight: bold;
+        background-color: #00000015;
+      }
+      
+      tfoot td {
+        padding: 0.75rem;
+      }
+      
+      /* Estilos Adicionais */
+      table caption {
+        font-size: 1.25rem;
+        font-weight: bold;
+        color: #333;
+      }
+      .tabelaSelecionados{
+        text-align: center;
+      }
